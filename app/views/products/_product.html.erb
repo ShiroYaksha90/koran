@@ -16,7 +16,10 @@
         <%= link_to 'Show',product,class:'hover:underline' %>
       </li>
       <li><%= link_to 'Edit', edit_product_path(product),class:'hover:underline'%></li>
-      <li> <%= button_to 'Destroy', product,method: :delete %> </li>
+      <li> <%= link_to 'Destroy', product, class: 'hover:underline', data: {
+        turbo_method: :delete,
+        turbo_confirm: "Are you sure?"
+      } %> </li>
     </ul>
   </td>
 </tr>
